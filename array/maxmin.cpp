@@ -2,16 +2,19 @@
 using namespace std;
 
 int getMax(int num[],int n){
-    int max = INT_MIN; //min of int range -2^31
+    int maxi = INT_MIN; //min of int range -2^31
+
 
     for(int i = 0; i<n ; i++){
-        if(num[i] > max){
-            max = num[i];
-        }
+        maxi=max(maxi,num[i]);
+        
+        // if(num[i] > maxi){
+        //     maxi = num[i];
+        // }
 
     }
 
-    return max;
+    return maxi;
 
 }
 int main(){
@@ -26,7 +29,7 @@ int main(){
         cin>>num[i];
     }
 
-    cout<<"max value is"<<getMax(num,size);
+    cout<<"maxi value is"<<getMax(num,size);
     
 
     return 0;
