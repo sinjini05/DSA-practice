@@ -26,7 +26,5 @@ int main(){
     else{
     cout<<"key absent";
     }
-
-
     return 0;
 }
