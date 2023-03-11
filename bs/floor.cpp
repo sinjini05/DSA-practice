@@ -1,12 +1,31 @@
-Node* constructDLL(vector<int>& arr) {
-        Node * root = new Node(arr[0]) ; 
-        Node * temp = root ; 
-        temp->prev=NULL ; 
-        for(int i=1 ; i<arr.size() ; i++){
-            Node * node = new Node(arr[i]) ; 
-            node->prev = temp ; 
-            temp->next = node ; 
-            temp = temp->next ; 
+class Solution{
+  public:
+    // Function to find floor of x
+    // n: size of vector
+    // x: element whose floor is to find
+    int findFloor(long long arr[], int n, long long x){
+        int start=0;
+        int ans=-1;
+        int end=n-1;
+        int mid=(start+end)/2;
+        while(start<=end){
+            if(arr[mid]==x){
+                return mid;
+                
+            }
+            else if(arr[mid]>x){
+                end=mid-1;
+            }
+            else{
+                start=mid+1;
+                ans=start-1;
+                
+            }
         }
-        return root ; 
+        return ans;
+        
+        
+        // Your code here
+        
     }
+};
