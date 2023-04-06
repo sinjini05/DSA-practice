@@ -21,6 +21,8 @@ class Solution
 
                 string ans="";
 
+                // substr-takes two arg pos and len, and makes a copy
+
                 ans=s1.substr(i,s1.size())+s1.substr(0,i);
 
                 if(ans==s2){
